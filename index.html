@@ -148,6 +148,17 @@
 
   .backtop{position:fixed; bottom:22px; left:22px; z-index:60; background:var(--maroon-dark); color:#fff; border:none; width:44px; height:44px; border-radius:50%; cursor:pointer; opacity:0; pointer-events:none; transition:opacity .25s ease; font-size:16px; box-shadow:0 6px 18px rgba(0,0,0,.25);}
   .backtop.show{opacity:1; pointer-events:auto;}
+  .fulltable-wrap{overflow-x:auto; border-radius:16px; box-shadow:var(--shadow); border:1px solid var(--line);}
+  table.sched{min-width:920px; width:100%; border-collapse:collapse; background:#fff;}
+  table.sched th{background:var(--maroon-dark); color:#fff; padding:12px 10px; font-size:13px; text-align:center; vertical-align:middle; line-height:1.5;}
+  table.sched th.daycol{background:var(--maroon)}
+  table.sched td{border:1px solid var(--line); padding:12px 12px; vertical-align:top; font-size:13px; color:var(--ink-soft);}
+  table.sched td.daycell{background:var(--paper); text-align:center; font-weight:700; color:var(--maroon-dark); font-size:14.5px; vertical-align:middle;}
+  table.sched .cell-title{font-weight:700; color:var(--maroon-dark); display:block; margin-bottom:4px; font-size:13.5px;}
+  table.sched ul{margin:0; padding-inline-start:16px;}
+  table.sched ul li{margin-bottom:5px;}
+  table.sched ul li::marker{color:var(--gold);}
+  table.sched td.prayer{text-align:center; font-weight:700; color:var(--maroon-dark); background:var(--maroon-tint); vertical-align:middle;}
 </style>
 </head>
 <body>
@@ -161,6 +172,7 @@
       <a href="#grp-structure">الهيكلة الزمنية</a>
       <a href="#grp-week">الجدول الأسبوعي</a>
       <a href="#grp-solutions">كيف يعالج الفجوات</a>
+      <a href="#grp-fulltable">الجدول كاملًا</a>
     </nav>
   </div>
 </div>
@@ -232,6 +244,74 @@
         <span class="group-badge">٥ حلول</span>
       </div>
       <div class="tilegrid" id="solutions-grid"></div>
+    </div>
+  </section>
+
+  <section class="group" id="grp-fulltable">
+    <div class="group-inner">
+      <div class="group-head">
+        <div>
+          <h2>نموذج الجدول الأسبوعي المقترح</h2>
+          <p>معالجة الفجوات الميدانية في الحصص — الجدول كاملًا كما ورد بدون أي تعديل.</p>
+        </div>
+        <span class="group-badge">الجدول الكامل</span>
+      </div>
+      <div class="fulltable-wrap">
+        <table class="sched">
+          <thead>
+            <tr>
+              <th class="daycol">اليوم</th>
+              <th>06:45 – 07:05<br>(20)د</th>
+              <th>07:05 – 10:05<br>(180)د - التعلم المعرفي المُركّز</th>
+              <th>10:05 – 10:20<br>(15)د</th>
+              <th>10:20 – 12:35<br>(135)د - تعلم ممتع وتطبيقي منتج</th>
+              <th>12:35 – 01:00<br>(25)د</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="daycell">الأحد</td>
+              <td><span class="cell-title">الطلاقة الأسبوع:</span>هدف الأسبوع وشعاره</td>
+              <td><ul><li>لغتي (عربي)</li><li>رياضيات</li><li>إسلاميات (محتوى مدمج ومختصر)</li></ul></td>
+              <td class="prayer">الصلاة والتوازن</td>
+              <td><ul><li>English (مكثف وممتع)</li><li>🔬 مختبر العلوم التطبيقية (دعم مستهدفات نافس)</li><li>📖 نادي القراءة والتبحر</li></ul></td>
+              <td><span class="cell-title">إنتاج اليوم وحصاده:</span>ماذا تعلمت؟ وماذا طبّقت؟</td>
+            </tr>
+            <tr>
+              <td class="daycell">الاثنين</td>
+              <td><span class="cell-title">آيات وبصائر:</span>قرآن وتدبر وقيمة</td>
+              <td><ul><li>رياضيات</li><li>لغتي (عربي)</li><li>علوم (معرفة أساسية)</li></ul></td>
+              <td class="prayer">الصلاة والتوازن</td>
+              <td><ul><li>English (مكثف وممتع)</li><li>🏃‍♂️ أكاديمية الرياضة والبدنية (تفعيل وتنشيط)</li><li>🛠️ ورشة المهارات الحياتية</li></ul></td>
+              <td><span class="cell-title">مشروع قصير:</span>توثيق أثر وعرض أداء ملموس</td>
+            </tr>
+            <tr>
+              <td class="daycell">الثلاثاء</td>
+              <td><span class="cell-title">مهارة الأسبوع:</span>مهارة عملية تطبيقية</td>
+              <td><ul><li>لغتي (عربي)</li><li>رياضيات</li><li>إسلاميات</li></ul></td>
+              <td class="prayer">الصلاة والتوازن</td>
+              <td><ul><li>🤖 معمل التقنية وSTEM (مهارات رقمية للجميع)</li><li>💡 مختبر الابتكار وصناعة الحلول</li><li>🗣️ أكاديمية التواصل والقيادة</li></ul></td>
+              <td><span class="cell-title">تحدي اليوم:</span>منافسة مهارية وقياس أثر</td>
+            </tr>
+            <tr>
+              <td class="daycell">الأربعاء</td>
+              <td><span class="cell-title">قراءة وإلهام:</span>قراءة وحوار وإلهام</td>
+              <td><ul><li>رياضيات</li><li>English (معرفة أساسية)</li><li>علوم (معرفة أساسية لـ"نافس")</li></ul></td>
+              <td class="prayer">الصلاة والتوازن</td>
+              <td><ul><li>🤖 المهارات الرقمية (صفوف أولية وعليا)</li><li>🌱 نادي البيئة والحياة والعلوم</li><li>🎨 استوديو الإبداع والفنون</li></ul></td>
+              <td><span class="cell-title">ملف الإنجاز:</span>رصد المخرجات والتقويم الذاتي</td>
+            </tr>
+            <tr>
+              <td class="daycell">الخميس</td>
+              <td><span class="cell-title">حصاد الأسبوع:</span>مراجعة وإنجاز وتكريم</td>
+              <td><ul><li>لغتي (عربي)</li><li>رياضيات</li><li>🚀 حصص القدرات</li></ul></td>
+              <td class="prayer">الصلاة والتوازن</td>
+              <td><ul><li>🏆 الأندية الاختيارية التنافسية</li><li>🎤 منصة العرض والمشاركة القيادية</li></ul></td>
+              <td><span class="cell-title">حصاد الأسبوع:</span>تكريم المبدعين وتنظيم الخروج</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
